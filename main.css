@@ -1,0 +1,368 @@
+@charset "UTF-8";
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden], template {
+  display: none;
+}
+
+html {
+  background: #fff;
+  color: #000;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  background: transparent;
+}
+a:focus {
+  outline: thin dotted;
+}
+a:hover, a:active {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: "“" "”" "‘" "’";
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+figure {
+  margin: 0;
+}
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+  border: 0;
+  padding: 0;
+  white-space: normal;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+  vertical-align: baseline;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+html input[type=button],
+input[type=reset],
+input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type=checkbox], input[type=radio] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0%;
+  margin-bottom: 0;
+}
+
+a,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+:root {
+  --background: hsl(0deg, 0%, 100%);
+  --backgroun-pattern: hsl(225deg, 100%, 98%);
+  --background-card: hsl(227deg, 47%, 96%);
+  --text-blue: hsl(228deg, 12%, 44%);
+  --text-white: hsl(230deg, 17%, 14%);
+  --toggle: linear-gradient(to right, hsl(210deg, 78%, 56%), hsl(146deg, 68%, 55%));
+}
+
+.dark-mode {
+  --background: hsl(230deg, 17%, 14%);
+  --backgroun-pattern: hsl(232deg, 19%, 15%);
+  --background-card: hsl(228deg, 28%, 20%);
+  --text-blue: hsl(228deg, 34%, 66%);
+  --text-white: hsl(0deg, 0%, 100%);
+  --toggle: hsl(230deg, 22%, 74%);
+}
+
+body {
+  background-color: var(--background);
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  font-size: 0.875rem;
+}
+
+.container {
+  width: 20.375rem;
+  margin: 2.5625rem auto 0;
+}
+@media (min-width: 48em) {
+  .container {
+    width: 46.875rem;
+  }
+}
+@media (min-width: 62em) {
+  .container {
+    width: 60.625rem;
+  }
+}
+@media (min-width: 75em) {
+  .container {
+    width: 73.125rem;
+  }
+}
+
+main .container .header .main-dashboard {
+  border-bottom: 0.0625rem solid var(--text-blue);
+  padding-bottom: 1.5rem;
+}
+main .container .header .main-dashboard h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: var(--light-text);
+}
+main .container .header .main-dashboard p {
+  margin-top: 0.3125rem;
+  font-weight: 700;
+  color: var(--text-blue);
+}
+main .container .toggle {
+  margin-top: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .container .toggle > div:first-child {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-blue);
+}
+main .container .toggle .color-switch-wrapper .color-switch {
+  width: 3rem;
+  height: 1.5rem;
+  position: absolute;
+  background: var(--toggle);
+  border-radius: 40px;
+  left: -auto;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+main .container .toggle .color-switch-wrapper .color-switch .color-switch-toggler {
+  width: 1.6em;
+  height: 1.6em;
+  background: black;
+  position: absolute;
+  border-radius: 10em;
+  top: 0.2em;
+  left: 0.2em;
+  cursor: pointer;
+  -webkit-transition: all 250ms ease-in-out;
+  transition: all 250ms ease-in-out;
+}
