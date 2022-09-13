@@ -1,0 +1,25 @@
+@use "../util/index2" as *;
+
+:root {
+  --background: #{$light-bg};
+  --backgroun-pattern: #{$light-bg-pattern};
+  --background-card: #{$light-bg-card};
+  --text-blue: #{$light-blue-text};
+  --text-white: #{$light-text};
+  --toggle: #{$light-toggle};
+}
+.dark-mode {
+  --background: #{$dark-bg};
+  --backgroun-pattern: #{$dark-bg-pattern};
+  --background-card: #{$dark-bg-card};
+  --text-blue: #{$dark-blue-text};
+  --text-white: #{$dark-text};
+  --toggle: #{$dark-toggle};
+}
+
+body {
+  background: var(--background);
+  font-family: $family;
+  font-size: rem($size);
+  min-height: 100vh;
+}

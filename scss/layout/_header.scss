@@ -1,0 +1,100 @@
+@use "../util/index2" as *;
+main {
+  .container {
+    // .pattern {
+    //   position: absolute;
+    //   width: 100%;
+    //   height: rem(235);
+    //   top: 0;
+    //   left: 0;
+    //   background-color: var(--backgroun-pattern);
+    //   border-bottom-left-radius: rem(15);
+    //   border-bottom-right-radius: rem(15);
+    //   z-index: -2;
+    // }
+    .header {
+      @include breakpoint(medium) {
+        display: flex;
+        justify-content: space-between;
+      }
+      .main-dashboard {
+        margin-top: rem(41);
+        @include breakpoint(medium) {
+          border: none;
+          padding: 0;
+        }
+        border-bottom: rem(1) solid var(--text-blue);
+        padding-bottom: rem(24);
+        h1 {
+          @include breakpoint(medium) {
+            font-size: 32px;
+          }
+          font-size: rem(24);
+          font-weight: 700;
+          margin-bottom: 0;
+          color: var(--text-white);
+        }
+        p {
+          @include breakpoint(medium) {
+            font-size: 16px;
+          }
+          margin-top: rem(5);
+          font-weight: 700;
+          color: var(--text-blue);
+        }
+      }
+    }
+    .toggle {
+      margin-top: rem(61);
+      @include breakpoint(medium) {
+        margin-top: rem(48);
+      }
+      display: flex;
+      justify-content: space-between;
+      > div {
+        &:first-child {
+          @include breakpoint(medium) {
+            margin-right: rem(61);
+            margin-top: rem(2);
+          }
+          font-size: 16px;
+          font-weight: 700;
+          color: var(--text-blue);
+        }
+      }
+      .color-switch-wrapper {
+        display: flex;
+        justify-content: flex-end;
+        .color-switch {
+          width: rem(48);
+          height: rem(24);
+          position: absolute;
+          background: (var(--toggle));
+          border-radius: 40px;
+          cursor: pointer;
+          .color-switch-toggle {
+            width: rem(18);
+            height: rem(18);
+            background: var(--background);
+            position: absolute;
+            border-radius: 10em;
+            top: rem(3);
+            right: rem(3);
+            cursor: pointer;
+            transition: all 250ms ease-in-out;
+          }
+        }
+        #input-color-switch {
+          display: none;
+          &:checked {
+            ~ label {
+              .color-switch-toggle {
+                transform: translate(rem(-24));
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+@use "../util/index2" as *;
+main {
+  .container {
+    .socials {
+      @include breakpoint(medium) {
+        grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+        grid-template-rows: auto auto;
+        column-gap: rem(30);
+      }
+      margin-top: rem(36);
+      display: grid;
+      row-gap: 24px;
+      > div {
+        &:nth-child(2) {
+          &::after {
+            background: $twitter;
+          }
+          .con-1 {
+            i {
+              color: $twitter;
+            }
+          }
+        }
+        &:nth-child(3) {
+          &::after {
+            background: $instagram;
+          }
+          .con-1 {
+            i {
+              //   background: $instagram;
+              background: -moz-linear-gradient(
+                top,
+                hsl(37, 97%, 70%),
+                hsl(329, 70%, 58%) 100%
+              );
+
+              background: -webkit-linear-gradient(
+                top,
+                #e72c83 0%,
+                #a742c6 100%
+              );
+              background: linear-gradient(
+                to bottom,
+                hsl(37, 97%, 70%) 0%,
+                hsl(329, 70%, 58%) 100%
+              );
+              -webkit-background-clip: text;
+              -moz-background-clip: text;
+              background-clip: text;
+              -webkit-text-fill-color: transparent;
+            }
+          }
+        }
+        &:nth-child(4) {
+          &::after {
+            background: $youtube;
+          }
+          .con-1 {
+            i {
+              color: $youtube;
+            }
+          }
+          .con-2 {
+            i {
+              color: $red;
+            }
+            div {
+              color: $red;
+            }
+          }
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: rem(4);
+          background-color: $facebook;
+          border-radius: 10px;
+          top: 0;
+          left: 0;
+        }
+        position: relative;
+        padding: rem(28) 0 rem(24);
+        width: 100%;
+        height: rem(212);
+        background-color: var(--background-card);
+        text-align: center;
+        overflow: hidden;
+        border-radius: rem(10);
+        .con-1 {
+          div {
+            display: inline-block;
+            color: var(--text-blue);
+            font-weight: 700;
+            margin-left: rem(5);
+          }
+          i {
+            font-size: 20px;
+            color: $facebook;
+            width: 20px;
+          }
+        }
+        .con-2 {
+          margin-top: rem(16);
+          div {
+            display: inline-block;
+            color: $green;
+          }
+          i {
+            color: $green;
+          }
+        }
+        p {
+          font-size: 2.75rem;
+          font-weight: 700;
+          margin-top: rem(15);
+          color: var(--text-white);
+        }
+        .folwers {
+          margin-top: rem(2);
+          font-size: 16px;
+          letter-spacing: 5px;
+          text-transform: uppercase;
+          color: var(--text-blue);
+          font-weight: 300;
+        }
+      }
+    }
+  }
+}

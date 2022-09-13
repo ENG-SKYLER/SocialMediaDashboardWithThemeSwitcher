@@ -1,0 +1,15 @@
+@use "../util/index2" as *;
+
+.container {
+  width: 87%;
+  margin: 0 auto;
+  @include breakpoint(medium) {
+    width: rem(750);
+  }
+  @include breakpoint(large) {
+    width: rem(970);
+  }
+  @include breakpoint(xlarge) {
+    width: rem(1170); // 1170 original -- for this case -- have to be 1100px
+  }
+}
