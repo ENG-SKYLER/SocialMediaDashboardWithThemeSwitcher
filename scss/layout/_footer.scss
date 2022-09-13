@@ -1,0 +1,16 @@
+@use "../util/index2" as *;
+
+footer {
+  .attribution {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--text-blue);
+  }
+  a {
+    text-decoration: none;
+    color: $red;
+    font-size: rem(18);
+  }
+}
